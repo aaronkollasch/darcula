@@ -363,6 +363,14 @@ if has('nvim')
   hi! link LspDiagnosticsFloatingWarning NormalFloat
   hi! link LspDiagnosticsFloatingInformation NormalFloat
   hi! link LspDiagnosticsFloatingHint NormalFloat
+  hi! link DiagnosticError ErrorSign
+  hi! link DiagnosticWarn WarningSign
+  hi! link DiagnosticInfo InfoSign
+  hi! link DiagnosticHint HintSign
+  hi! link DiagnosticUnderlineError CodeError
+  hi! link DiagnosticUnderlineWarn CodeWarning
+  hi! link DiagnosticUnderlineInfo CodeInfo
+  hi! link DiagnosticUnderlineHint CodeHint
 endif
 
 " Vim terminal colors (for :terminal)
@@ -616,6 +624,29 @@ hi! link shSpecial String
 hi! link shCommandSub NormalFg
 hi! link shDerefSpecial NormalFg
 hi! link shOperator NormalFg
+
+" Python
+if &filetype ==# 'python'
+  hi! link @variable Normal
+  hi! link @type Normal
+  hi! link @constant Normal
+  hi! link @constructor Normal
+  hi! link @operator Normal
+  hi! link @function.call Normal
+  hi! link @punctuation.bracket Normal
+  hi! link @punctuation.delimiter Normal
+  hi! link @method.call Normal
+  hi! link @include Keyword
+  hi! link @attribute PreProc
+  hi! link @boolean Keyword
+  hi! link @variable.builtin Constant
+  hi! link @constant.builtin Keyword
+  highlight @parameter guifg=#aa4926
+  highlight @type.builtin guifg=#8888c5
+  highlight @function.builtin guifg=#8888c5
+  highlight @dunder guifg=#b200b2
+  highlight pythonDunder guifg=#b200b2
+endif
 
 " help
 hi! link helpHyperTextJump Number
