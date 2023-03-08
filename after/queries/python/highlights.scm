@@ -22,3 +22,22 @@
               ;; https://docs.python.org/3/library/stdtypes.html
               "bool" "int" "float" "complex" "list" "tuple" "range" "str"
               "bytes" "bytearray" "memoryview" "set" "frozenset" "dict" "type"))
+
+(function_definition
+  (parameters
+    (identifier)? @parameter.definition
+    (typed_parameter
+      (identifier) @parameter.definition)?
+    (default_parameter
+      (identifier) @parameter.definition)?
+    (typed_default_parameter
+      (identifier) @parameter.definition)?))
+((identifier) @variable.builtin
+ (#eq? @variable.builtin "self"))
+((identifier) @variable.builtin
+ (#eq? @variable.builtin "cls"))
+
+["." ":" ";" (ellipsis)] @punctuation.normal
+
+((string) @string.bytes
+  (#match? @string.bytes "^b"))

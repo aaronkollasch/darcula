@@ -38,8 +38,11 @@ let s:p={
       \ 'incSearch': ['#155221', 22],
       \ 'foldedFg': ['#8C8C8C', 245],
       \ 'foldedBg': ['#3A3A3A', 237],
-      \ 'constant': ['#9876AA', 103],
+      \ 'constant': ['#94558D', 103],
       \ 'keyword': ['#CC7832', 172],
+      \ 'parameter': ['#AA4926', 160],
+      \ 'builtin': ['#8888C5', 105],
+      \ 'dunder': ['#b200b2', 127],
       \ 'comment': ['#808080', 244],
       \ 'docComment': ['#629755', 65],
       \ 'string': ['#6A8759', 101],
@@ -632,18 +635,22 @@ hi! link @constructor.python NormalFg
 hi! link @operator.python NormalFg
 hi! link @function.call.python NormalFg
 hi! link @punctuation.bracket.python NormalFg
-hi! link @punctuation.delimiter.python NormalFg
+hi! link @punctuation.normal.python NormalFg
 hi! link @method.call.python NormalFg
 hi! link @include.python Keyword
 hi! link @attribute.python PreProc
 hi! link @boolean.python Keyword
 hi! link @variable.builtin.python Constant
 hi! link @constant.builtin.python Keyword
-highlight @parameter.python guifg=#aa4926
-highlight @type.builtin.python guifg=#8888c5
-highlight @function.builtin.python guifg=#8888c5
-highlight @dunder guifg=#b200b2
-highlight pythonDunder guifg=#b200b2
+hi! link @string.documentation.python docComment
+hi! link @string.escape.python Keyword
+call s:Hi('@string.bytes.python', s:p.htmlString)
+hi! link @parameter.definition.python NormalFg
+call s:Hi('@parameter.python', s:p.parameter)
+call s:Hi('@type.builtin.python', s:p.builtin)
+call s:Hi('@function.builtin.python', s:p.builtin)
+call s:Hi('@dunder', s:p.dunder)
+call s:Hi('pythonDunder', s:p.dunder)
 
 " help
 hi! link helpHyperTextJump Number
