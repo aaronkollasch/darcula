@@ -626,27 +626,24 @@ hi! link shDerefSpecial NormalFg
 hi! link shOperator NormalFg
 
 " Python
-if &filetype ==# 'python'
-  hi! link @variable Normal
-  hi! link @type Normal
-  hi! link @constant Normal
-  hi! link @constructor Normal
-  hi! link @operator Normal
-  hi! link @function.call Normal
-  hi! link @punctuation.bracket Normal
-  hi! link @punctuation.delimiter Normal
-  hi! link @method.call Normal
-  hi! link @include Keyword
-  hi! link @attribute PreProc
-  hi! link @boolean Keyword
-  hi! link @variable.builtin Constant
-  hi! link @constant.builtin Keyword
-  highlight @parameter guifg=#aa4926
-  highlight @type.builtin guifg=#8888c5
-  highlight @function.builtin guifg=#8888c5
-  highlight @dunder guifg=#b200b2
-  highlight pythonDunder guifg=#b200b2
-endif
+hi! link @type.python NormalFg
+hi! link @constant.python NormalFg
+hi! link @constructor.python NormalFg
+hi! link @operator.python NormalFg
+hi! link @function.call.python NormalFg
+hi! link @punctuation.bracket.python NormalFg
+hi! link @punctuation.delimiter.python NormalFg
+hi! link @method.call.python NormalFg
+hi! link @include.python Keyword
+hi! link @attribute.python PreProc
+hi! link @boolean.python Keyword
+hi! link @variable.builtin.python Constant
+hi! link @constant.builtin.python Keyword
+highlight @parameter.python guifg=#aa4926
+highlight @type.builtin.python guifg=#8888c5
+highlight @function.builtin.python guifg=#8888c5
+highlight @dunder guifg=#b200b2
+highlight pythonDunder guifg=#b200b2
 
 " help
 hi! link helpHyperTextJump Number
