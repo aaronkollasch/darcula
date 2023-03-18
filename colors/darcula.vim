@@ -374,6 +374,12 @@ if has('nvim')
   hi! link DiagnosticUnderlineWarn CodeWarning
   hi! link DiagnosticUnderlineInfo CodeInfo
   hi! link DiagnosticUnderlineHint CodeHint
+
+  " Telescope
+  call s:Hi('TelescopeMatching', s:p.htmlString, s:p.null, 'bold')
+  call s:Hi('TelescopeBorder', s:p.debug, s:p.null)
+  call s:Hi('TelescopePromptPrefix', s:p.ANSIBrightMagenta, s:p.null)
+  hi! link TelescopeSelection DiffAdd
 endif
 
 " Vim terminal colors (for :terminal)
