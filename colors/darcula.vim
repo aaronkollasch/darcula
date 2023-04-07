@@ -380,6 +380,11 @@ if has('nvim')
   call s:Hi('TelescopeBorder', s:p.debug, s:p.null)
   call s:Hi('TelescopePromptPrefix', s:p.ANSIBrightMagenta, s:p.null)
   hi! link TelescopeSelection DiffAdd
+
+  " Navbuddy
+  highlight! link NavbuddyNormal Normal
+  call s:Hi('NavbuddyFloatBorder', s:p.debug, s:p.null)
+  " highlight! link NavbuddyCursor Cursor " disrupts NavbuddyCursorLine
 endif
 
 " Vim terminal colors (for :terminal)
