@@ -640,14 +640,16 @@ hi! link shDerefSpecial NormalFg
 hi! link shOperator NormalFg
 
 " Python
+hi! link @variable.python NormalFg
+hi! link @variable.member.python NormalFg
 hi! link @type.python NormalFg
 hi! link @constant.python NormalFg
 hi! link @constructor.python NormalFg
 hi! link @operator.python NormalFg
 hi! link @function.call.python NormalFg
+hi! link @function.method.call.python NormalFg
 hi! link @punctuation.bracket.python NormalFg
 hi! link @punctuation.normal.python NormalFg
-hi! link @method.call.python NormalFg
 hi! link @include.python Keyword
 hi! link @attribute.python PreProc
 hi! link @boolean.python Keyword
@@ -655,9 +657,10 @@ hi! link @variable.builtin.python Constant
 hi! link @constant.builtin.python Keyword
 hi! link @string.documentation.python docComment
 hi! link @string.escape.python Keyword
+hi! link @punctuation.special.python Keyword
 call s:Hi('@string.bytes.python', s:p.htmlString)
 hi! link @parameter.definition.python NormalFg
-call s:Hi('@parameter.python', s:p.parameter)
+call s:Hi('@variable.parameter.python', s:p.parameter)
 call s:Hi('@type.builtin.python', s:p.builtin)
 call s:Hi('@function.builtin.python', s:p.builtin)
 call s:Hi('@dunder', s:p.dunder)
