@@ -215,7 +215,7 @@ hi! link Type Keyword
 call s:Hi('Typedef', s:p.typeDef)
 call s:Hi('Todo', s:p.todo, s:p.null, 'italic')
 hi! link Special PreProc
-call s:Hi('Constant', s:p.constant, s:p.null, 'italic')
+call s:Hi('Constant', s:p.constant, s:p.null)
 call s:Hi('String', s:p.string)
 hi! link Character String
 call s:Hi('Number', s:p.number)
