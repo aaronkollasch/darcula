@@ -666,5 +666,24 @@ call s:Hi('@function.builtin.python', s:p.builtin)
 call s:Hi('@dunder', s:p.dunder)
 call s:Hi('pythonDunder', s:p.dunder)
 
+" lsp semantic tokens
+hi! link @lsp.type.variable NormalFg
+hi! link @lsp.type.parameter NONE
+hi! link @lsp.type.typeParameter NormalFg
+hi! link @lsp.type.type NormalFg
+hi! link @lsp.type.class NormalFg
+hi! link @lsp.type.namespace NormalFg
+hi! link @lsp.typemod.function.definition Function
+hi! link @lsp.type.function NormalFg
+hi! link @lsp.type.method NONE
+hi! link @lsp.mod.readonly NormalFg
+hi! link @lsp.mod.decorator PreProc
+call s:Hi('@type.builtin', s:p.builtin)
+call s:Hi('@function.builtin', s:p.builtin)
+hi! link @lsp.mod.builtin @type.builtin
+hi! link @lsp.mod.defaultLibrary @type.builtin
+hi! link @lsp.typemod.decorator.builtin PreProc
+hi! link @lsp.typemod.decorator.defaultLibrary PreProc
+
 " help
 hi! link helpHyperTextJump Number
