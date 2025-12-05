@@ -385,6 +385,18 @@ if has('nvim')
   highlight! link NavbuddyNormal Normal
   call s:Hi('NavbuddyFloatBorder', s:p.debug, s:p.null)
   " highlight! link NavbuddyCursor Cursor " disrupts NavbuddyCursorLine
+
+  " Gitsigns
+  call s:Hi('GitSignsAdd', s:p.ANSIGreen, s:p.null)
+  call s:Hi('GitSignsChange', s:p.ANSIBlue, s:p.null)
+  call s:Hi('GitSignsDelete', s:p.ANSIRed, s:p.null)
+  call s:Hi('GitSignsAddNr', s:p.ANSIGreen, s:p.null)
+  call s:Hi('GitSignsChangeNr', s:p.ANSIBlue, s:p.null)
+  call s:Hi('GitSignsDeleteNr', s:p.ANSIRed, s:p.null)
+  highlight! link GitSignsAddLn DiffAdd
+  highlight! link GitSignsChangeLn DiffChange
+  highlight! link GitSignsDeleteLn DiffDelete
+  highlight! link GitSignsCurrentLineBlame ANSIGray
 endif
 
 " Vim terminal colors (for :terminal)
